@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
+    height: 942px;
 }
 
 header{
@@ -17,11 +18,46 @@ h1{
 
 .menus{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+    grid-template-columns: 40% 40%;
+    grid-gap: 5%;
+    justify-content: center;
     text-align: center;
+    height: 70%;
+    margin-top: 5%;
 }
 
 a{
     text-decoration: none;
+}
+
+ a > div {
+    box-shadow: 2px 2px 2px 2px #e9dfe8;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.btn-prochainement{
+    background-color: #579c87 ;
+    color: #fecc45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 25%;
+    padding: 2% 5%;
+    font-size: 1.5em;
+    border-radius: 20px;
+}
+
+footer{
+    background-color: #579c87;
+    color: #fecc45;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2em;
+    padding: 1% 2%;
+    margin-top: 0;
 }

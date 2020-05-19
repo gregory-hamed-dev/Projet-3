@@ -39,10 +39,13 @@ h1 > a {
 
 .menus > a > div {
   transform: scale(1);
-  transition: transform 800ms;
+  opacity: 1;
+  transition: transform, opacity, 1s;
+  -webkit-transition: transform, opacity, 1s cubic-bezier(0.22, 0.66, 0.22, 0.75);
 }
 .menus > a > div:hover {
-  transform: scale(1.25);
+  transform: scale(1.3);
+  opacity: 0.75;
 }
 
 a {
@@ -60,6 +63,13 @@ a {
 
 .menu-note {
   background-color: #fcdfdb;
+}
+
+.menu-note > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* titres menus page accueil*/
@@ -152,14 +162,16 @@ footer {
   left: 0;
 }
 
-.contact > a {
+#contact > a, #mentions > a {
   text-decoration: none;
   color: #fecc45;
 }
 
 /*Pages des menus*/
 #carte, #carte-2, #carte-3, #carte-4 {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 5% 20%;
   height: 100%;
   margin-bottom: 10%;
@@ -169,6 +181,13 @@ footer {
 
 #carte {
   background-color: #fcdfdb;
+}
+#carte-2{
+  background-color: #fef5fa;
+}
+
+#carte-3{
+  background-color: #edefef;
 }
 
 #carte-4 {
@@ -180,7 +199,7 @@ footer {
   font-size: 3em;
   font-family: "jeff script";
   text-align: center;
-  padding-top: 10%;
+  padding-top: 0%;
 }
 
 #carte-2 > h2 {
@@ -191,7 +210,7 @@ footer {
   font-size: 2.5em;
   font-family: "croissant one";
   text-align: center;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 #carte-3 > h2 {
@@ -228,21 +247,41 @@ footer {
   color: #6e4ccc;
 }
 
-#carte > h3, #carte-3 > h3, #carte-4 > h3 {
-  font-size: 1.5em;
+#carte > div > h3, #carte-3 > div > h3, #carte-4 > div > h3 {
+  font-size: 1.75em;
   padding-top: 2%;
+  width: 35%;
   padding-bottom: 2%;
   text-align: center;
   font-family: "jeff script";
 }
 
-#carte-2 > h3 {
-  font-size: 1.25em;
+
+#carte > div > h3{
+  width: 25%;
+}
+
+.menu-titre-deco{
+  padding: 5% 2%;
+}
+
+/* decoration texte menu 2*/
+img{
+  width: 35%;
+}
+
+/*décoration texte menu 4*/
+
+.deco-titre-menu4{
+  width: 35%;
+}
+#carte-2 > div > h3 {
+  font-size: 1.5em;
   font-family: "roboto";
-  padding-top: 2%;
-  padding-bottom: 2%;
+  width: 50%;
   text-align: center;
 }
+
 
 /* layouts menus*/
 article {
@@ -280,11 +319,46 @@ article {
 }
 
 #titre-bas {
-  font-size: 2em;
+  font-size: 2.5em;
   font-family: "jeff script";
   text-align: center;
-  padding-bottom: 5%;
+  padding-bottom: 0;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin: 5% auto 1%;
+}
+
+.menu-titre-deco{
+  display: flex;
+  justify-content: center;
+}
+/*Svg de la page la note enchantée*/
+.note-music{
+  width: 35%;
+  
+}
+
+.note-music-menu{
+  margin-top: 5%;
+  width: 15%;
+  align-self: center;
+}
+.note-music-menu-bas{
+  width: 10%;
+  margin-right: 2%;
+
+}
+
+.deco-titre-menu1{
+  width: 35%;
+  padding-bottom: 10;
+}
+
+/*svg de la page le chic à la française*/
+
+.deco-menu2{
+  width: 35%;
 }
 
 @media all and (min-width: 700px) and (max-width: 1024px) {
@@ -305,6 +379,18 @@ article {
     width: 300px;
     height: 450px;
   }
+img{
+  width:30%;
+}
+
+#carte-2 > div > h3 {
+  font-size: 1em;
+  font-family: "roboto";
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center;
+}
+
 
   .btn-prochainement {
     font-size: 1.5em;
@@ -342,7 +428,16 @@ article {
   h1 {
     font-size: 1.5em;
   }
-
+  img{
+    width:35%;
+  }
+  #carte-2 > div > h3 {
+    font-size: 1.25em;
+    font-family: "roboto";
+    padding: 2% 2%;
+    text-align: center;
+  }
+  
   .menus {
     display: flex;
     flex-direction: column;
@@ -406,6 +501,19 @@ article {
     font-size: 0.5em;
     height: 250px;
   }
+
+  img{
+    width:25%;
+  }
+
+  #carte-2 > div > h3 {
+    font-size: 1em;
+    font-family: "roboto";
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+  }
+  
 
   footer {
     font-size: 1.25em;

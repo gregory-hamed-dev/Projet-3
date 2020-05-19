@@ -1,36 +1,15 @@
 
 @import "./utils/fonctions.scss";
 @import "./utils/mixins.scss";
+@import "./layout/body-header-footer.scss";
+@import "./components/bouton.scss";
 
-body {
-    margin: 0px;
-    padding: 0px;
-    font-family: $main-fontfamily;
-  }
 
-header{
-    background-color: $main_backgroundcolor;
-    text-align: center;  
-}
-
-h1{
-    margin: 0px;
-    padding-top: 1%;
-    padding-bottom: 1%;
-   
-}
 
 h2{
     text-align: center;
     font-size: 3em;
     margin-bottom: 0;
-}
-
-h1 > a{
-    color: $main-textcolor;
-    font-size: 2.5em;
-    text-decoration: none;
-    font-family: 'roboto'
 }
 
 .menus{
@@ -47,9 +26,15 @@ h1 > a{
 
 .menus > a > div{
     transform: scale(1);
-    transition: transform 800ms;
+    opacity: 1;
+    transition: transform, opacity, 1s;
+    -webkit-transition: transform, opacity, 1s cubic-bezier(.22,.66,.22,.75);
+    
+    
         &:hover{
-            transform: scale(1.25);
+            transform: scale(1.30);
+            opacity: 0.75;
+            
         }
 }
 a{
@@ -69,7 +54,12 @@ a{
 .menu-note{
     background-color: #fcdfdb ;
 }
-
+.menu-note > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 /* titres menus page accueil*/
 .menu-note > div > h2{
     
@@ -86,6 +76,7 @@ a{
     font-size: 1.5em;
     font-family: 'croissant one';
 }
+
 
 .menu-delices > div > h2{
     background: -webkit-linear-gradient(360deg, #0e35e0, #8bc4fa);
@@ -135,37 +126,6 @@ a{
 .menu-delices{
     background-color: #f9f9f9;
 }
-
-.btn-prochainement{
-    background-color: $main_backgroundcolor;
-    color: $main-textcolor;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 7% 30%;
-    padding: 2% 5%;
-    font-size: 2.5em;
-    border-radius: 20px;
-}
-
-footer{
-    background-color: #579c87;
-    color: $main-textcolor;
-    display: flex;
-    justify-content: space-between;
-    font-size: 2em;
-    padding: 1% 2%;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left:0;   
-}
-
-.contact > a{
-    text-decoration: none;
-    color: $main-textcolor;
-}
-
 /*Pages des menus*/
 #carte, #carte-2, #carte-3, #carte-4 {
 
@@ -193,6 +153,7 @@ footer{
     font-family: $secondary-font;
     text-align: center;
     padding-top: 10%;
+    
 }
 #carte-2 > h2{
     background: -webkit-linear-gradient(360deg, #c77412, #834afe);

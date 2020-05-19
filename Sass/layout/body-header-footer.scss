@@ -1,0 +1,43 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: $main-fontfamily;
+  }
+/* le header*/
+header{
+    background-color: $main_backgroundcolor;
+    text-align: center;  
+}
+
+h1{
+    margin: 0px;
+    padding-top: 1%;
+    padding-bottom: 1%;  
+}
+
+h1 > a{
+    color: $main-textcolor;
+    font-size: 2.5em;
+    text-decoration: none;
+    font-family: $main-fontfamily;
+}
+
+/*le footer*/
+footer{
+        background-color: $main_backgroundcolor;
+        color: $main-textcolor;
+        display: flex;
+        justify-content: space-between;
+        font-size: 2em;
+        padding: 1% 2%;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left:0;   
+    }
+    
+#contact > a, #mentions > a{
+        text-decoration: none;
+        color: $main-textcolor;
+        
+    }

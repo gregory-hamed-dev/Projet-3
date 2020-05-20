@@ -41,3 +41,113 @@ footer{
         color: $main-textcolor;
         
     }
+
+    /*Section page d'accueil*/
+
+    h2{
+        text-align: $align;
+        font-size: 3em;
+        margin-bottom: 0;
+    }
+    
+    .menus{
+       
+        display: grid;
+        grid-template-columns: 25% 25%;
+        grid-gap: 5%;
+        justify-content: $align;
+        align-items: $align;
+        margin-top: 5%;
+    
+        
+    }
+    
+    .menus > a > div{
+        transform: scale(1);
+        opacity: 1;
+        transition: transform, opacity, 1s;
+        -webkit-transition: transform, opacity, 1s cubic-bezier(.22,.66,.22,.75);
+            &:hover{
+                transform: scale(1.30);
+                opacity: 0.75;  
+            }
+    }
+    a{
+        text-decoration: none;
+    }
+    .menu-note, .menu-chic, .menu-delices, .menu-gout{
+    
+        @include layout-mainpage-menus;
+    }
+    
+    .menu-note{
+        background-color: #fcdfdb ;
+    }
+    .menu-note > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: $align;
+        align-items: $align;
+    }
+    /* titres menus page accueil*/
+    .menu-note > div > h2{
+        
+        font-size: 2.5em;
+        color: black;  
+        font-family: 'devonshire';
+    }
+    
+    .menu-chic > div > h2{
+        background: $gradient-menu2;
+        @include h-gradient-effect;
+        font-size: 1.5em;
+        font-family: 'croissant one';
+    }
+    
+    
+    .menu-delices > div > h2{
+        background: $gradient-menu3;
+        @include h-gradient-effect;
+        font-size: 2em; 
+        font-family: 'dancing script';
+    }
+    
+    .menu-gout > div > h2{
+        background: $gradient-menu4;
+        @include h-gradient-effect;
+        font-size: 2em; 
+        font-family: 'ink free';
+        
+    }
+    .menu-note > div > h3{
+        color: black;
+        font-size: 3em;
+        font-family: $secondary-font;
+        text-align: $align;
+    
+    }
+    .menu-chic > div > h3{
+        color: #c77412;
+        font-size: 3em;
+        text-align: $align;
+    }
+    
+    .menu-delices > div > h3{
+        color: #006ffb;
+        font-size: 3em;
+        font-family: $secondary-font;
+        text-align: $align;
+    }
+    
+    .menu-gout > div > h3{
+        color: #70be53;
+        font-size: 3em;
+        font-family: $secondary-font;
+        text-align: $align;
+    }
+    
+    .menu-delices{
+        background-color: #f9f9f9;
+    }
+    
+    

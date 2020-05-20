@@ -4,6 +4,12 @@ body {
   font-family: "roboto";
 }
 
+/*selection de texte avec les couleurs principales du site*/
+::selection{
+  color: #fecc45;
+  background-color: #579c87; /*fin*/
+}
+
 header {
   background-color: #579c87;
   text-align: center;
@@ -38,14 +44,13 @@ h1 > a {
 }
 
 .menus > a > div {
-  transform: scale(1);
-  opacity: 1;
-  transition: transform, opacity, 1s;
+  opacity: 0.75;
+  transition: transform, opacity, 1s cubic-bezier(0.22, 0.66, 0.22, 0.75) ;
   -webkit-transition: transform, opacity, 1s cubic-bezier(0.22, 0.66, 0.22, 0.75);
 }
 .menus > a > div:hover {
   transform: scale(1.3);
-  opacity: 0.75;
+  opacity: 1;
 }
 
 a {
@@ -237,15 +242,115 @@ footer {
 
 #french-first {
   color: #c67412;
+  cursor: pointer;
+  
 }
-
 #french-second {
   color: #a56799;
+  cursor: pointer;
 }
-
 #french-third {
   color: #6e4ccc;
+  cursor: pointer;
 }
+/* animation des titres sur les pages des menus*/
+
+/* menu note enchantée*/
+#carte > div > h3::after{
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  transition: width 1000ms ease-in-out;
+  background:-webkit-linear-gradient( 1turn, #ea4c60, #f29069);
+}
+
+#carte > div > h3:hover::after{
+  width: 100%;
+}
+
+/* menu chic à la française*/
+
+#french-first::after{
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  transition: width 1000ms ease-in-out;
+  background:#c67412;
+}
+
+#french-second::after{
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  transition: width 1000ms ease-in-out;
+  background:#a56799;
+}
+#french-third::after{
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  transition: width 1000ms ease-in-out;
+  background:#6e4ccc;
+}
+#french-first:hover::after, #french-second:hover::after, #french-third:hover::after {
+  
+  width:100%;
+  
+}
+
+/* menu le délice des papilles*/
+
+#bien-commencer::after
+{
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  transition: width 1000ms ease-in-out;
+  background:#214899;
+}
+
+#bien-continuer::after{
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  transition: width 1000ms ease-in-out;
+  background:#2a67b0 ;
+}
+
+#bien-terminer::after{
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  transition: width 1000ms ease-in-out;
+  background:#4395d1 ;
+}
+
+#bien-commencer:hover::after, #bien-continuer:hover::after, #bien-terminer:hover::after{
+  width: 100%;
+}
+
+/*menu la palette du goût*/
+
+#carte-4 > div > h3::after{
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background:-webkit-linear-gradient( 1turn, #358e31, #b8ff6e);
+  transition: width 1000ms ease-in-out;
+}
+#carte-4 > div > h3:hover::after{
+  width: 100%;
+}
+
+/*fin des animations des pages menus*/
 
 #carte > div > h3, #carte-3 > div > h3, #carte-4 > div > h3 {
   font-size: 1.75em;
@@ -254,12 +359,16 @@ footer {
   padding-bottom: 2%;
   text-align: center;
   font-family: "jeff script";
+  cursor: pointer;
 }
 
 
 #carte > div > h3{
   width: 25%;
 }
+
+
+
 
 .menu-titre-deco{
   padding: 5% 2%;
@@ -295,6 +404,7 @@ article {
 #french-appetit {
   font-family: "roboto";
   color: #c67412;
+  
 }
 
 #french-plaisir {
@@ -361,9 +471,18 @@ article {
   width: 35%;
 }
 
+#mentions-leg{
+  margin: 5% 5% 10%;
+  font-family: 'roboto';
+}
+
 @media all and (min-width: 700px) and (max-width: 1024px) {
   h1 {
     font-size: 1.5em;
+  }
+
+  h2{
+    font-size: 2.5em;
   }
 
   .menus {
@@ -379,12 +498,10 @@ article {
     width: 300px;
     height: 450px;
   }
-img{
-  width:30%;
-}
+
 
 #carte-2 > div > h3 {
-  font-size: 1em;
+  font-size: 1.5em;
   font-family: "roboto";
   padding-top: 2%;
   padding-bottom: 2%;
@@ -428,14 +545,29 @@ img{
   h1 {
     font-size: 1.5em;
   }
-  img{
-    width:35%;
+  
+  h2{
+    font-size: 1.75em;
   }
+
+  
   #carte-2 > div > h3 {
-    font-size: 1.25em;
+    font-size: 1em;
     font-family: "roboto";
     padding: 2% 2%;
     text-align: center;
+  }
+
+#carte > h2, #carte-2 > h2, #carte-3 > h2, #carte-4 > h2{
+  font-size: 1.75em ;
+}
+
+#titre-bas{
+  font-size: 1.75em;
+}
+
+  #carte > div > h3, #carte-3 > div > h3, #carte-4 > div > h3{
+    font-size: 1.25em;
   }
   
   .menus {
@@ -455,13 +587,13 @@ img{
 
   .btn-prochainement {
     font-size: 1em;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-bottom: 25%;
   }
 
   footer {
-    font-size: 1.5em;
+    font-size: 1.25em;
     margin: 0;
     padding: 5px;
   }
@@ -478,7 +610,7 @@ img{
 
   .plats {
     font-weight: 1em;
-    font-size: 1em;
+    font-size: 0.75em;
     width: 100%;
     margin-top: 0;
     margin-bottom: 5%;
@@ -487,7 +619,7 @@ img{
 
   .prix {
     font-weight: 1em;
-    font-size: 1em;
+    font-size: 0.75em;
     text-align: center;
     margin-top: 0;
     margin-bottom: 5%;
@@ -502,9 +634,6 @@ img{
     height: 250px;
   }
 
-  img{
-    width:25%;
-  }
 
   #carte-2 > div > h3 {
     font-size: 1em;

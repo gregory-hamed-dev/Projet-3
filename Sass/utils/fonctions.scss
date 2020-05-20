@@ -1,5 +1,20 @@
+/*couleurs et dégradés*/
 $main-backgroundcolor:  #579c87;
 $main-textcolor: #fecc45;
+$color-entree-menu2: #c67412;
+$color-meal-menu2: #a56799;
+$color-dessert-menu2:#6e4ccc;
+$color-entree-menu3: #214899;
+$color-meal-menu3: #2a67b0;
+$color-dessert-menu3: #4395d1;
+$gradient-menu1: -webkit-linear-gradient(1turn, #ea4c60, #f29069);
+$gradient-menu2: -webkit-linear-gradient(1turn, #c77412, #834afe);
+$gradient-menu3: -webkit-linear-gradient(1turn, #0e35e0, #8bc4fa);
+$gradient-menu4: -webkit-linear-gradient(1turn, #358e31, #b8ff6e);
+/*polices*/
 $main-fontfamily: 'roboto';
 $secondary-font: 'jeff script';
-$textcolor-menu2: -webkit-linear-gradient(360deg, #c77412, #834afe);
+/*alignement*/
+$align: center;
+/*layout*/
+$pad-top: 10%;

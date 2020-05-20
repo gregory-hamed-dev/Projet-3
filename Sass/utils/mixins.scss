@@ -1,0 +1,41 @@
+/*dégradé dans les titres*/
+@mixin h-gradient-effect {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;  
+}
+
+/*effet sous-lignage sous les entrées, plats, desserts dans les pages menus*/
+@mixin anim-titre-menu {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  transition: width 1000ms ease-in-out; 
+}
+
+/*Mise en page des éléments menus en page d'accueil*/
+@mixin layout-mainpage-menus{
+  box-shadow: 2px 2px 5px 5px #e9dfe8;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: $align;
+  align-items: $align;
+}
+
+@mixin h3-layout{
+  font-size: 3em;
+  font-family: $secondary-font;
+  text-align: $align;
+}
+
+/*mise en page des conteneurs principaux dans les pages menus*/
+@mixin layout-main-menu{
+    display: block;
+    margin: 5% 20%;
+    height: 100%;
+    margin-bottom: 10%;
+    box-shadow: 3px 3px 3px 3px #e9dfe8;
+    padding-bottom: 5%;
+}

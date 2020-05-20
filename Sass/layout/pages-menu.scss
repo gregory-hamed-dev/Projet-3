@@ -1,0 +1,216 @@
+/*Pages des menus*/
+#carte, #carte-2, #carte-3, #carte-4 {
+
+    @include layout-main-menu;   
+}
+#carte{
+    background-color: #fcdfdb;
+}
+
+#carte-4{
+    background-color: #fff;
+}
+
+/* titres des pages menus*/
+
+#carte > h2{
+    font-size: 3em;
+    font-family: $secondary-font;
+    text-align: $align;
+    padding-top: 0%;
+    
+}
+#carte-2 > h2{
+    background: $gradient-menu2;
+    @include h-gradient-effect;
+    font-size: 2.5em; 
+    font-family: 'croissant one';
+    text-align: $align;
+    padding-top: 5%;
+}
+#carte-3 > h2{
+    background: $gradient-menu3;
+    @include h-gradient-effect;
+    font-size: 4em; 
+    font-family: 'dancing script';
+    text-align: $align;
+    padding-top: $pad-top;
+
+}
+#carte-4 > h2{
+
+    background: $gradient-menu4;
+    @include h-gradient-effect;
+    font-size: 4em; 
+    font-family: 'ink free';
+    text-align: $align;
+    padding-top: $pad-top;
+}
+
+#french-first{
+    color:$color-entree-menu2;
+
+}
+#french-second{
+    color: $color-meal-menu2;
+}
+#french-third{
+    color: $color-dessert-menu2;
+}
+#carte > h3, #carte-3 > h3, #carte-4 > h3{
+    font-size: 1.5em;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: $align;
+    font-family: $secondary-font;
+}
+#carte-2 > h3{
+    font-size: 1.25em;
+    font-family: 'roboto';
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: $align;
+
+}
+/* layouts menus*/
+
+article{
+
+    display: grid;
+    grid-template-columns: 65% 10%;
+    justify-content: $align;
+    font-size: 1.25em;  
+    font-family: $secondary-font;
+}
+
+#french-appetit{
+    font-family: $main-fontfamily;
+    color: $color-entree-menu2;
+}
+
+#french-plaisir{
+    font-family: $main-fontfamily;
+    color: $color-meal-menu2;
+}
+#french-gourmand{
+    font-family: $main-fontfamily;
+    color: $color-dessert-menu2;
+}
+.plats{
+   
+    margin: 0;
+    line-height: 2em;
+     
+}
+.prix{
+    line-height: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+#titre-bas{
+    font-size: 2em;
+    font-family: $secondary-font;
+    text-align: $align;
+    padding-bottom: 5%;
+    font-weight: bold;
+}
+
+/* animation des titres sur les pages des menus*/
+
+/* menu note enchantée*/
+#carte > div > h3{
+    &::after{
+        @include anim-titre-menu;
+        background: $gradient-menu1;
+        }
+    &:hover{
+        &::after{
+            width: 100%;
+        }
+    }
+ }
+  
+  /* menu chic à la française*/
+  
+  #french-first{
+      &::after{
+        @include anim-titre-menu;
+        background: $color-entree-menu2;}
+      &:hover{
+          &::after{
+            width:100%;
+          }
+      }
+  }
+   
+  #french-second{
+      &::after{
+        @include anim-titre-menu;
+        background: $color-meal-menu2;}
+      &:hover{
+          &::after{
+            width: 100%;
+          }
+      }       
+  }
+
+  #french-third{
+      &::after{
+        @include anim-titre-menu;
+        background: $color-dessert-menu2;}
+      &:hover{
+          &::after{
+              width: 100%;
+          }
+      }
+  }  
+  /* menu le délice des papilles*/
+  
+  #bien-commencer{
+      &::after{
+        @include anim-titre-menu;
+        background: $color-entree-menu3;}
+      &:hover{
+          &::after{
+              width: 100%;
+          }
+      }
+  }
+
+  #bien-continuer{
+      &::after{
+        @include anim-titre-menu;
+        background: $color-meal-menu3;}
+      &:hover{
+          &::after{
+              width: 100%;
+          }
+      }
+  }
+  
+  #bien-terminer{
+      &::after{
+        @include anim-titre-menu;
+        background: $color-dessert-menu3;}
+      &:hover{
+          &::after{
+              width: 100%;
+          }
+      }
+  }
+  
+  /*menu la palette du goût*/
+  
+  #carte-4 > div > h3{
+      &::after{
+        @include anim-titre-menu;
+        background: $gradient-menu4;}
+      &:hover{
+          &::after{
+              width: 100%;
+          }
+      }
+  }
+  
+  /*fin des animations des pages menus*/

@@ -3,17 +3,73 @@ body {
     padding: 0px;
     font-family: $main-fontfamily;
   }
+  
+
+/*selection de texte avec les couleurs principales du site*/
+::selection{
+    color: #fecc45;
+    background-color: #579c87; /*fin*/
+}
+
 /* le header*/
 header{
     background-color: $main_backgroundcolor;
-    text-align: center;  
+    text-align: $align;  
 }
 
 h1{
     margin: 0px;
     padding-top: 1%;
     padding-bottom: 1%;  
+    animation: progress-scale 1000ms;
 }
+
+@keyframes progress-scale{
+    0%{
+      opacity:0;
+      transform:scale(0);
+    }
+    10%{
+      opacity: 0.1;
+      transform:scale(0.1);
+    }
+    20%{
+      opacity: 0.2;
+      transform:scale(0.2);
+    }
+    30%{
+      opacity: 0.3;
+      transform:scale(0.3);
+    }
+    40%{
+      opacity: 0.4;
+      transform:scale(0.4);
+    }
+    50%{
+      opacity: 0.5;
+      transform:scale(0.5);
+    }
+    60%{
+      opacity: 0.6;
+      transform:scale(0.6);
+    }
+    70%{
+      opacity: 0.7;
+      transform:scale(0.7);
+    }
+    80%{
+      opacity: 0.8;
+      transform:scale(0.8);
+    }
+    90%{
+      opacity: 0.9;
+      transform:scale(0.9);
+    }
+    100%{
+      opacity: 1;
+      transform:scale(1);
+    }
+  }
 
 h1 > a{
     color: $main-textcolor;
@@ -23,131 +79,158 @@ h1 > a{
 }
 
 /*le footer*/
-footer{
-        background-color: $main_backgroundcolor;
-        color: $main-textcolor;
-        display: flex;
-        justify-content: space-between;
-        font-size: 2em;
-        padding: 1% 2%;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        left:0;   
-    }
+footer
+{
+    background-color: $main_backgroundcolor;
+    color: $main-textcolor;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2em;
+    padding: 1% 2%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left:0;   
+}
+#mentions, #contact{
     
-#contact > a, #mentions > a{
-        text-decoration: none;
-        color: $main-textcolor;
-        
+    &:hover{
+        animation: shake 150ms 3;
+       
     }
+}
+
+@keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-2deg); }
+        20% { transform: translate(-3px, 0px) rotate(2deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(2deg); }
+        50% { transform: translate(-1px, 2px) rotate(-2deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-2deg); }
+        80% { transform: translate(-1px, -1px) rotate(2deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-2deg); }
+}
+
+#contact > a, #mentions > a{
+    text-decoration: none;
+    color: $main-textcolor;
+}
 
     /*Section page d'accueil*/
 
-    h2{
-        text-align: $align;
-        font-size: 3em;
-        margin-bottom: 0;
-    }
+h2{
+    text-align: $align;
+    font-size: 3em;
+    margin-bottom: 0;
+}
     
-    .menus{
+.menus{
        
-        display: grid;
-        grid-template-columns: 25% 25%;
-        grid-gap: 5%;
-        justify-content: $align;
-        align-items: $align;
-        margin-top: 5%;
+    display: grid;
+    grid-template-columns: 25% 25%;
+    grid-gap: 40px;
+    justify-content: $align;
+    align-items: $align;
+    margin-top: 5%;
+   
+}
     
-        
-    }
+.menus > a > div{
+    transform: scale(1);
+    opacity: 0.70;
+    transition: transform, opacity, 1s;
+    -webkit-transition: transform, opacity, 1s cubic-bezier(.22,.66,.22,.75);
+         &:hover{
+            transform: scale(1.30);
+            opacity: 1;  
+         }
+}
     
-    .menus > a > div{
-        transform: scale(1);
-        opacity: 1;
-        transition: transform, opacity, 1s;
-        -webkit-transition: transform, opacity, 1s cubic-bezier(.22,.66,.22,.75);
-            &:hover{
-                transform: scale(1.30);
-                opacity: 0.75;  
-            }
-    }
-    a{
-        text-decoration: none;
-    }
-    .menu-note, .menu-chic, .menu-delices, .menu-gout{
+a{
+    text-decoration: none;
+}
+
+.menu-note, .menu-chic, .menu-delices, .menu-gout{
+     @include layout-mainpage-menus;
+}
     
-        @include layout-mainpage-menus;
-    }
-    
-    .menu-note{
-        background-color: #fcdfdb ;
-    }
-    .menu-note > div{
-        display: flex;
-        flex-direction: column;
-        justify-content: $align;
-        align-items: $align;
-    }
+.menu-note{
+    background-color: #fcdfdb ;
+}
+
+.menu-note > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: $align;
+    align-items: $align;
+}
+
     /* titres menus page accueil*/
-    .menu-note > div > h2{
+.menu-note > div > h2{
         
-        font-size: 2.5em;
-        color: black;  
-        font-family: 'devonshire';
-    }
+    font-size: 2.5em;
+    color: black;  
+    font-family: 'devonshire';
+}
     
-    .menu-chic > div > h2{
-        background: $gradient-menu2;
-        @include h-gradient-effect;
-        font-size: 1.5em;
-        font-family: 'croissant one';
-    }
+.menu-chic > div > h2{
+    background: $gradient-menu2;
+    @include h-gradient-effect;
+    font-size: 1.5em;
+    font-family: 'croissant one';
+}
     
+.menu-delices > div > h2{
+    background: $gradient-menu3;
+    @include h-gradient-effect;
+    font-size: 2em; 
+    font-family: 'dancing script';
+}
     
-    .menu-delices > div > h2{
-        background: $gradient-menu3;
-        @include h-gradient-effect;
-        font-size: 2em; 
-        font-family: 'dancing script';
-    }
+.menu-gout > div > h2{
+    background: $gradient-menu4;
+    @include h-gradient-effect;
+    font-size: 2em; 
+    font-family: 'ink free';
+}
+
+.menu-note > div > h3{
+    color: black;
+    font-size: 3em;
+    font-family: $secondary-font;
+    text-align: $align;
+}
     
-    .menu-gout > div > h2{
-        background: $gradient-menu4;
-        @include h-gradient-effect;
-        font-size: 2em; 
-        font-family: 'ink free';
-        
-    }
-    .menu-note > div > h3{
-        color: black;
-        font-size: 3em;
-        font-family: $secondary-font;
-        text-align: $align;
+.menu-chic > div > h3{
+    color: #c77412;
+    font-size: 3em;
+    text-align: $align;
+}
     
-    }
-    .menu-chic > div > h3{
-        color: #c77412;
-        font-size: 3em;
-        text-align: $align;
-    }
+.menu-delices > div > h3{
+    color: #006ffb;
+    font-size: 3em;
+    font-family: $secondary-font;
+    text-align: $align;
+}
     
-    .menu-delices > div > h3{
-        color: #006ffb;
-        font-size: 3em;
-        font-family: $secondary-font;
-        text-align: $align;
-    }
+.menu-gout > div > h3{
+    color: #70be53;
+    font-size: 3em;
+    font-family: $secondary-font;
+    text-align: $align;
+}
     
-    .menu-gout > div > h3{
-        color: #70be53;
-        font-size: 3em;
-        font-family: $secondary-font;
-        text-align: $align;
-    }
-    
-    .menu-delices{
-        background-color: #f9f9f9;
-    }
+.menu-delices{
+    background-color: #f9f9f9;
+}
+
+    /*Note de musique du menu 1 sur la page d'accueil */
+#note-music{
+    width: 35%;  
+}
     
     

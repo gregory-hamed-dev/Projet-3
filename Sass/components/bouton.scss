@@ -4,8 +4,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 7% 30%;
-    padding: 2% 5%;
+    margin: 2% 30% 7%;
     font-size: 2.5em;
     border-radius: 20px;
+}
+
+
+.load{
+    margin-left: 3px;
+    padding: 0;
+    &__point{
+        animation: loading $time-point backwards ease-in-out infinite alternate ;
+        @for $i from 1 through 3{
+            &--#{$i}{
+                animation-delay: $time-point/3*$i;
+            }
+        }
+    }
+}
+
+
+@keyframes loading{
+    0%{
+        opacity: 0;
+    }
+    100%{
+         opacity: 1;
+    }
 }

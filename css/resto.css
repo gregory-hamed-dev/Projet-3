@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0px;
   padding: 0px;
@@ -5,11 +6,13 @@ body {
 }
 
 /*selection de texte avec les couleurs principales du site*/
-::selection{
+::selection {
   color: #fecc45;
-  background-color: #579c87; /*fin*/
+  background-color: #579c87;
+  /*fin*/
 }
 
+/* le header*/
 header {
   background-color: #579c87;
   text-align: center;
@@ -19,14 +22,55 @@ h1 {
   margin: 0px;
   padding-top: 1%;
   padding-bottom: 1%;
+  animation: progress-scale 1000ms;
 }
 
-h2 {
-  text-align: center;
-  font-size: 3em;
-  margin-bottom: 0;
+@keyframes progress-scale {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  10% {
+    opacity: 0.1;
+    transform: scale(0.1);
+  }
+  20% {
+    opacity: 0.2;
+    transform: scale(0.2);
+  }
+  30% {
+    opacity: 0.3;
+    transform: scale(0.3);
+  }
+  40% {
+    opacity: 0.4;
+    transform: scale(0.4);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 0.6;
+    transform: scale(0.6);
+  }
+  70% {
+    opacity: 0.7;
+    transform: scale(0.7);
+  }
+  80% {
+    opacity: 0.8;
+    transform: scale(0.8);
+  }
+  90% {
+    opacity: 0.9;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
-
 h1 > a {
   color: #fecc45;
   font-size: 2.5em;
@@ -34,18 +78,84 @@ h1 > a {
   font-family: "roboto";
 }
 
+/*le footer*/
+footer {
+  background-color: #579c87;
+  color: #fecc45;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2em;
+  padding: 1% 2%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+#mentions:hover, #contact:hover {
+  animation: shake 150ms 3;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-2deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(2deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(2deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-2deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-2deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(2deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-2deg);
+  }
+}
+#contact > a, #mentions > a {
+  text-decoration: none;
+  color: #fecc45;
+}
+
+/*Section page d'accueil*/
+h2 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
 .menus {
   display: grid;
   grid-template-columns: 25% 25%;
-  grid-gap: 5%;
+  grid-gap: 40px;
   justify-content: center;
   align-items: center;
   margin-top: 5%;
 }
 
 .menus > a > div {
-  opacity: 0.75;
-  transition: transform, opacity, 1s cubic-bezier(0.22, 0.66, 0.22, 0.75) ;
+  transform: scale(1);
+  opacity: 0.7;
+  transition: transform, opacity, 1s;
   -webkit-transition: transform, opacity, 1s cubic-bezier(0.22, 0.66, 0.22, 0.75);
 }
 .menus > a > div:hover {
@@ -70,7 +180,7 @@ a {
   background-color: #fcdfdb;
 }
 
-.menu-note > div{
+.menu-note > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,7 +195,7 @@ a {
 }
 
 .menu-chic > div > h2 {
-  background: -webkit-linear-gradient(360deg, #c77412, #834afe);
+  background: -webkit-linear-gradient(1turn, #c77412, #834afe);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -94,19 +204,19 @@ a {
 }
 
 .menu-delices > div > h2 {
-  background: -webkit-linear-gradient(360deg, #0e35e0, #8bc4fa);
+  background: -webkit-linear-gradient(1turn, #0e35e0, #8bc4fa);
+  color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
   font-size: 2em;
   font-family: "dancing script";
 }
 
 .menu-gout > div > h2 {
-  background: -webkit-linear-gradient(360deg, #358e31, #b8ff6e);
+  background: -webkit-linear-gradient(1turn, #358e31, #b8ff6e);
+  color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
   font-size: 2em;
   font-family: "ink free";
 }
@@ -142,36 +252,47 @@ a {
   background-color: #f9f9f9;
 }
 
+/*Note de musique du menu 1 sur la page d'accueil */
+#note-music {
+  width: 35%;
+}
+
 .btn-prochainement {
   background-color: #579c87;
   color: #fecc45;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 7% 30%;
-  padding: 2% 5%;
+  margin: 2% 30% 7%;
   font-size: 2.5em;
   border-radius: 20px;
 }
 
-footer {
-  background-color: #579c87;
-  color: #fecc45;
-  display: flex;
-  justify-content: space-between;
-  font-size: 2em;
-  padding: 1% 2%;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
+.load {
+  margin-left: 3px;
+  padding: 0;
+}
+.load__point {
+  animation: loading 800ms backwards ease-in-out infinite alternate;
+}
+.load__point--1 {
+  animation-delay: 266.6666666667ms;
+}
+.load__point--2 {
+  animation-delay: 533.3333333333ms;
+}
+.load__point--3 {
+  animation-delay: 800ms;
 }
 
-#contact > a, #mentions > a {
-  text-decoration: none;
-  color: #fecc45;
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
 /*Pages des menus*/
 #carte, #carte-2, #carte-3, #carte-4 {
   display: flex;
@@ -187,11 +308,12 @@ footer {
 #carte {
   background-color: #fcdfdb;
 }
-#carte-2{
+
+#carte-2 {
   background-color: #fef5fa;
 }
 
-#carte-3{
+#carte-3 {
   background-color: #edefef;
 }
 
@@ -208,21 +330,21 @@ footer {
 }
 
 #carte-2 > h2 {
-  background: -webkit-linear-gradient(360deg, #c77412, #834afe);
+  background: -webkit-linear-gradient(1turn, #c77412, #834afe);
+  color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
   font-size: 2.5em;
   font-family: "croissant one";
   text-align: center;
-  padding-top: 5%;
+  padding-top: 10%;
 }
 
 #carte-3 > h2 {
-  background: -webkit-linear-gradient(360deg, #0e35e0, #8bc4fa);
+  background: -webkit-linear-gradient(1turn, #0e35e0, #8bc4fa);
+  color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
   font-size: 4em;
   font-family: "dancing script";
   text-align: center;
@@ -230,10 +352,10 @@ footer {
 }
 
 #carte-4 > h2 {
-  background: -webkit-linear-gradient(360deg, #358e31, #b8ff6e);
+  background: -webkit-linear-gradient(1turn, #358e31, #b8ff6e);
+  color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
   font-size: 4em;
   font-family: "ink free";
   text-align: center;
@@ -243,114 +365,17 @@ footer {
 #french-first {
   color: #c67412;
   cursor: pointer;
-  
 }
+
 #french-second {
   color: #a56799;
   cursor: pointer;
 }
+
 #french-third {
   color: #6e4ccc;
   cursor: pointer;
 }
-/* animation des titres sur les pages des menus*/
-
-/* menu note enchantée*/
-#carte > div > h3::after{
-  content: "";
-  display: block;
-  width: 0;
-  height: 4px;
-  transition: width 1000ms ease-in-out;
-  background:-webkit-linear-gradient( 1turn, #ea4c60, #f29069);
-}
-
-#carte > div > h3:hover::after{
-  width: 100%;
-}
-
-/* menu chic à la française*/
-
-#french-first::after{
-  content: "";
-  display: block;
-  width: 0;
-  height: 4px;
-  transition: width 1000ms ease-in-out;
-  background:#c67412;
-}
-
-#french-second::after{
-  content: "";
-  display: block;
-  width: 0;
-  height: 4px;
-  transition: width 1000ms ease-in-out;
-  background:#a56799;
-}
-#french-third::after{
-  content: "";
-  display: block;
-  width: 0;
-  height: 4px;
-  transition: width 1000ms ease-in-out;
-  background:#6e4ccc;
-}
-#french-first:hover::after, #french-second:hover::after, #french-third:hover::after {
-  
-  width:100%;
-  
-}
-
-/* menu le délice des papilles*/
-
-#bien-commencer::after
-{
-  content: "";
-  display: block;
-  width: 0;
-  height: 4px;
-  transition: width 1000ms ease-in-out;
-  background:#214899;
-}
-
-#bien-continuer::after{
-  content: "";
-  display: block;
-  width: 0;
-  height: 4px;
-  transition: width 1000ms ease-in-out;
-  background:#2a67b0 ;
-}
-
-#bien-terminer::after{
-  content: "";
-  display: block;
-  width: 0;
-  height: 4px;
-  transition: width 1000ms ease-in-out;
-  background:#4395d1 ;
-}
-
-#bien-commencer:hover::after, #bien-continuer:hover::after, #bien-terminer:hover::after{
-  width: 100%;
-}
-
-/*menu la palette du goût*/
-
-#carte-4 > div > h3::after{
-  content: "";
-  display: block;
-  width: 0;
-  height: 4px;
-  background:-webkit-linear-gradient( 1turn, #358e31, #b8ff6e);
-  transition: width 1000ms ease-in-out;
-}
-#carte-4 > div > h3:hover::after{
-  width: 100%;
-}
-
-/*fin des animations des pages menus*/
 
 #carte > div > h3, #carte-3 > div > h3, #carte-4 > div > h3 {
   font-size: 1.75em;
@@ -362,35 +387,23 @@ footer {
   cursor: pointer;
 }
 
-
-#carte > div > h3{
+#carte > div > h3 {
   width: 25%;
 }
 
-
-
-
-.menu-titre-deco{
-  padding: 5% 2%;
-}
-
-/* decoration texte menu 2*/
-img{
-  width: 35%;
-}
-
-/*décoration texte menu 4*/
-
-.deco-titre-menu4{
-  width: 35%;
-}
 #carte-2 > div > h3 {
   font-size: 1.5em;
   font-family: "roboto";
   width: 50%;
   text-align: center;
+  cursor: pointer;
 }
 
+.menu-titre-deco {
+  display: flex;
+  justify-content: center;
+  padding: 5% 2%;
+}
 
 /* layouts menus*/
 article {
@@ -404,7 +417,6 @@ article {
 #french-appetit {
   font-family: "roboto";
   color: #c67412;
-  
 }
 
 #french-plaisir {
@@ -439,49 +451,148 @@ article {
   margin: 5% auto 1%;
 }
 
-.menu-titre-deco{
-  display: flex;
-  justify-content: center;
-}
-/*Svg de la page la note enchantée*/
-.note-music{
-  width: 35%;
-  
+/*layout page mentions légales*/
+#mentions-leg {
+  margin: 5% 5% 10%;
+  font-family: "roboto";
 }
 
-.note-music-menu{
+/*gestion des svg*/
+/*Svg de la page la note enchantée*/
+#note-music {
+  width: 35%;
+}
+
+.note-music-menu {
   margin-top: 5%;
-  width: 15%;
+  width: 12%;
   align-self: center;
 }
-.note-music-menu-bas{
+
+.note-music-menu-bas {
   width: 10%;
   margin-right: 2%;
-
 }
 
-.deco-titre-menu1{
+.deco-titre-menu1 {
   width: 35%;
   padding-bottom: 10;
 }
 
-/*svg de la page le chic à la française*/
-
-.deco-menu2{
+/* decoration texte menu 2, menu 3 et menu 4*/
+img {
   width: 35%;
 }
 
-#mentions-leg{
-  margin: 5% 5% 10%;
-  font-family: 'roboto';
+/*fin gestion des svg*/
+/* animation des titres sur les pages des menus*/
+/* menu note enchantée*/
+#carte > div > h3::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  transition: width 1000ms ease-in-out;
+  background: -webkit-linear-gradient(1turn, #ea4c60, #f29069);
+}
+#carte > div > h3:hover::after {
+  width: 100%;
 }
 
+/* menu chic à la française*/
+#french-first::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  transition: width 1000ms ease-in-out;
+  background: #c67412;
+}
+#french-first:hover::after {
+  width: 100%;
+}
+
+#french-second::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  transition: width 1000ms ease-in-out;
+  background: #a56799;
+}
+#french-second:hover::after {
+  width: 100%;
+}
+
+#french-third::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  transition: width 1000ms ease-in-out;
+  background: #6e4ccc;
+}
+#french-third:hover::after {
+  width: 100%;
+}
+
+/* menu le délice des papilles*/
+#bien-commencer::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  transition: width 1000ms ease-in-out;
+  background: #214899;
+}
+#bien-commencer:hover::after {
+  width: 100%;
+}
+
+#bien-continuer::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  transition: width 1000ms ease-in-out;
+  background: #2a67b0;
+}
+#bien-continuer:hover::after {
+  width: 100%;
+}
+
+#bien-terminer::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  transition: width 1000ms ease-in-out;
+  background: #4395d1;
+}
+#bien-terminer:hover::after {
+  width: 100%;
+}
+
+/*menu la palette du goût*/
+#carte-4 > div > h3::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  transition: width 1000ms ease-in-out;
+  background: -webkit-linear-gradient(1turn, #358e31, #b8ff6e);
+}
+#carte-4 > div > h3:hover::after {
+  width: 100%;
+}
+
+/*fin des animations des pages menus*/
 @media all and (min-width: 700px) and (max-width: 1024px) {
   h1 {
     font-size: 1.5em;
   }
 
-  h2{
+  h2 {
     font-size: 2.5em;
   }
 
@@ -492,6 +603,14 @@ article {
     align-items: center;
   }
 
+  .menus > a > div {
+    transform: scale(0.75);
+  }
+
+  .menus > a > div:hover {
+    transform: scale(1);
+  }
+
   .menu-note, .menu-chic, .menu-delices, .menu-gout {
     margin-top: 5%;
     font-size: 1em;
@@ -499,20 +618,19 @@ article {
     height: 450px;
   }
 
-
-#carte-2 > div > h3 {
-  font-size: 1.5em;
-  font-family: "roboto";
-  padding-top: 2%;
-  padding-bottom: 2%;
-  text-align: center;
-}
-
+  #carte-2 > div > h3 {
+    font-size: 1.5em;
+    font-family: "roboto";
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+  }
 
   .btn-prochainement {
     font-size: 1.5em;
     margin-left: 30%;
     margin-right: 30%;
+    margin-bottom: 10%;
   }
 
   footer {
@@ -545,12 +663,11 @@ article {
   h1 {
     font-size: 1.5em;
   }
-  
-  h2{
+
+  h2 {
     font-size: 1.75em;
   }
 
-  
   #carte-2 > div > h3 {
     font-size: 1em;
     font-family: "roboto";
@@ -558,18 +675,18 @@ article {
     text-align: center;
   }
 
-#carte > h2, #carte-2 > h2, #carte-3 > h2, #carte-4 > h2{
-  font-size: 1.75em ;
-}
+  #carte > h2, #carte-2 > h2, #carte-3 > h2, #carte-4 > h2 {
+    font-size: 1.75em;
+  }
 
-#titre-bas{
-  font-size: 1.75em;
-}
+  #titre-bas {
+    font-size: 1.75em;
+  }
 
-  #carte > div > h3, #carte-3 > div > h3, #carte-4 > div > h3{
+  #carte > div > h3, #carte-3 > div > h3, #carte-4 > div > h3 {
     font-size: 1.25em;
   }
-  
+
   .menus {
     display: flex;
     flex-direction: column;
@@ -580,16 +697,16 @@ article {
   .menu-note, .menu-chic, .menu-delices, .menu-gout {
     margin-top: 5%;
     margin-bottom: 5%;
-    width: 40%;
+    width: 50%;
     font-size: 0.5em;
-    height: 250px;
+    height: 300px;
   }
 
   .btn-prochainement {
     font-size: 1em;
     margin-left: 20%;
     margin-right: 20%;
-    margin-bottom: 25%;
+    margin-bottom: 15%;
   }
 
   footer {
@@ -631,9 +748,8 @@ article {
     margin-bottom: 5%;
     width: 60%;
     font-size: 0.5em;
-    height: 250px;
+    height: 300px;
   }
-
 
   #carte-2 > div > h3 {
     font-size: 1em;
@@ -642,11 +758,38 @@ article {
     padding-bottom: 2%;
     text-align: center;
   }
-  
 
   footer {
     font-size: 1.25em;
   }
+
+  .btn-prochainement {
+    margin-bottom: 15%;
+  }
+}
+@font-face {
+  font-family: "Roboto-regular";
+  src: url("../../Fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Jeff Script Regular";
+  src: url("../../Fonts/Jeff Script Regular.otf") format("otf");
+}
+@font-face {
+  font-family: "CroissantOne-Regular";
+  src: url("../../Fonts/CroissantOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Devonshire-Regular";
+  src: url("../../Fonts/Devonshire-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "DancingScript-VariableFont_wght";
+  src: url("../../Fonts/DancingScript-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inkfree";
+  src: url("../../Fonts/Inkfree.ttf") format("truetype");
 }
 
 /*# sourceMappingURL=resto.css.map */

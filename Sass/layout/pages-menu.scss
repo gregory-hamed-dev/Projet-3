@@ -7,6 +7,14 @@
     background-color: #fcdfdb;
 }
 
+#carte-2{
+    background-color: #fef5fa;
+}
+
+#carte-3{
+    background-color: #edefef;
+}
+
 #carte-4{
     background-color: #fff;
 }
@@ -26,8 +34,9 @@
     font-size: 2.5em; 
     font-family: 'croissant one';
     text-align: $align;
-    padding-top: 5%;
+    padding-top: $pad-top;
 }
+
 #carte-3 > h2{
     background: $gradient-menu3;
     @include h-gradient-effect;
@@ -49,33 +58,50 @@
 
 #french-first{
     color:$color-entree-menu2;
+    cursor: pointer;
 
 }
 #french-second{
     color: $color-meal-menu2;
+    cursor: pointer;
+    
 }
 #french-third{
     color: $color-dessert-menu2;
+    cursor: pointer;
+    
 }
-#carte > h3, #carte-3 > h3, #carte-4 > h3{
-    font-size: 1.5em;
+#carte > div > h3, #carte-3 > div > h3, #carte-4 > div > h3{
+    font-size: 1.75em;
     padding-top: 2%;
+    width: 35%;
     padding-bottom: 2%;
     text-align: $align;
     font-family: $secondary-font;
+    cursor: pointer;
 }
-#carte-2 > h3{
-    font-size: 1.25em;
-    font-family: 'roboto';
-    padding-top: 2%;
-    padding-bottom: 2%;
-    text-align: $align;
 
+#carte > div > h3{
+    width: 25%;
 }
+
+#carte-2 > div > h3 {
+    font-size: 1.5em;
+    font-family: $main-fontfamily;
+    width: 50%;
+    text-align: $align;
+    cursor: pointer;
+  }
+
+.menu-titre-deco{
+    display: flex;
+    justify-content: center;
+    padding: 5% 2%;
+  }
+
 /* layouts menus*/
 
 article{
-
     display: grid;
     grid-template-columns: 65% 10%;
     justify-content: $align;
@@ -96,25 +122,64 @@ article{
     font-family: $main-fontfamily;
     color: $color-dessert-menu2;
 }
-.plats{
-   
-    margin: 0;
-    line-height: 2em;
-     
-}
-.prix{
-    line-height: 2em;
-    font-weight: bold;
-    margin: 0;
+
+.plats {
+  margin: 0;
+  line-height: 2em;
 }
 
-#titre-bas{
-    font-size: 2em;
+.prix {
+  line-height: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+#titre-bas {
+    font-size: 2.5em;
     font-family: $secondary-font;
     text-align: $align;
-    padding-bottom: 5%;
+    padding-bottom: 0;
     font-weight: bold;
+    display: flex;
+    justify-content: $align;
+    margin: 5% auto 1%;
 }
+/*layout page mentions légales*/
+#mentions-leg{
+    margin: 5% 5% 10%;
+    font-family: 'roboto';
+}
+  
+/*gestion des svg*/
+
+/*Svg de la page la note enchantée*/
+
+ #note-music{
+    width: 35%;  
+}
+
+.note-music-menu{
+    margin-top: 5%;
+    width: 12%;
+    align-self: $align;
+}
+.note-music-menu-bas{
+    width: 10%;
+    margin-right: 2%;
+}
+  
+.deco-titre-menu1{
+    width: 35%;
+    padding-bottom: 10;
+}
+
+  /* decoration texte menu 2, menu 3 et menu 4*/
+img{
+    width: 35%;
+  }
+
+
+/*fin gestion des svg*/
 
 /* animation des titres sur les pages des menus*/
 
@@ -212,5 +277,4 @@ article{
           }
       }
   }
-  
   /*fin des animations des pages menus*/

@@ -253,7 +253,7 @@ a {
 }
 
 /*Note de musique du menu 1 sur la page d'accueil */
-#note-music {
+.note-music {
   width: 35%;
 }
 

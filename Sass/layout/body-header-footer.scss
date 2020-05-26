@@ -141,8 +141,7 @@ h2{
 .menus > a > div{
     transform: scale(1);
     opacity: 0.70;
-    transition: transform, opacity, 1s;
-    -webkit-transition: transform, opacity, 1s cubic-bezier(.22,.66,.22,.75);
+    transition: transform, opacity, 1s cubic-bezier(.22,.66,.22,.75);
          &:hover{
             transform: scale(1.30);
             opacity: 1;  

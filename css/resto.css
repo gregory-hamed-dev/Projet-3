@@ -688,14 +688,7 @@ img {
   }
 
   #carte > div > h3, #carte-3 > div > h3, #carte-4 > div > h3 {
-    font-size: 1.1em;
-  }
-
-  .menus {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    font-size: 1.3em;
   }
 
   .menu-note, .menu-chic, .menu-delices, .menu-gout {
@@ -729,10 +722,11 @@ img {
     justify-content: center;
   }
 
-  .carte-menu {
+  section > .carte-menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   .plats {
@@ -748,31 +742,6 @@ img {
     text-align: center;
     margin-top: 0;
     margin-bottom: 5%;
-  }
-}
-@media all and (max-width: 320px) {
-  .menu-note, .menu-chic, .menu-delices, .menu-gout {
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 70%;
-    font-size: 0.5em;
-    height: 320px;
-  }
-
-  #carte-2 > div > h3 {
-    font-size: 1.2em;
-    font-family: "roboto";
-    padding-top: 2%;
-    padding-bottom: 2%;
-    text-align: center;
-  }
-
-  footer {
-    font-size: 1.25em;
-  }
-
-  .btn-prochainement {
-    margin-bottom: 15%;
   }
 }
 @font-face {

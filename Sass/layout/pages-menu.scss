@@ -86,11 +86,11 @@
 }
 
 #carte-2 > div > h3 {
-    font-size: 1.5em;
     font-family: $main-fontfamily;
     width: 50%;
     text-align: $align;
-    cursor: pointer;
+    font-size: 1.5em;
+    
   }
 
 .menu-titre-deco{
@@ -101,38 +101,52 @@
 
 /* layouts menus*/
 
-article{
+section > .carte-menu {
     display: grid;
-    grid-template-columns: 65% 10%;
-    justify-content: $align;
-    font-size: 1.25em;  
-    font-family: $secondary-font;
+    grid-template-columns: 75% 10%;
+    justify-content: center;
+    font-size: 1.5em;
+    font-family: "jeff script";
 }
 
-#french-appetit{
-    font-family: $main-fontfamily;
-    color: $color-entree-menu2;
-}
+#french-appetit {
+    font-family: "roboto";
+    color: #c67412;
+    display: grid;
+    grid-template-columns: 75% 10%;
+    justify-content: center;
+    font-size: 1.35em;
+  }
+  
+  #french-plaisir {
+    font-family: "roboto";
+    color: #a56799;
+    display: grid;
+    grid-template-columns: 75% 10%;
+    justify-content: center;
+    font-size: 1.25em;
+  }
+  
+  #french-gourmand {
+    font-family: "roboto";
+    color: #6e4ccc;
+    display: grid;
+    grid-template-columns: 75% 10%;
+    justify-content: center;
+    font-size: 1.25em;
+  }
 
-#french-plaisir{
-    font-family: $main-fontfamily;
-    color: $color-meal-menu2;
-}
-#french-gourmand{
-    font-family: $main-fontfamily;
-    color: $color-dessert-menu2;
-}
-
-.plats {
-  margin: 0;
-  line-height: 2em;
-}
-
-.prix {
-  line-height: 2em;
-  font-weight: bold;
-  margin: 0;
-}
+  .plats {
+    margin: 0;
+    line-height: 2em;
+    font-size: 1em;
+  }
+  
+  .prix {
+    line-height: 2em;
+    font-weight: bold;
+    margin: 0;
+  }
 
 #titre-bas {
     font-size: 2.5em;
@@ -154,24 +168,25 @@ article{
 
 /*Svg de la page la note enchantée*/
 
- #note-music{
-    width: 35%;  
-}
+#note-music {
+    width: 12%;
+    align-self: center;
+    padding-top: 25px;
+  }
 
 .note-music-menu{
     margin-top: 5%;
     width: 12%;
     align-self: $align;
 }
-.note-music-menu-bas{
-    width: 10%;
+#note-music-menu-bas {
+    width: 13%;
     margin-right: 2%;
-}
+  }
   
-.deco-titre-menu1{
+  .deco-titre-menu1 {
     width: 35%;
-    padding-bottom: 10;
-}
+  }
 
   /* decoration texte menu 2, menu 3 et menu 4*/
 img{

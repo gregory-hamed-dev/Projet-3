@@ -1,35 +1,34 @@
 @media all and (min-width: 700px) and (max-width: 1025px) {
-    h1 {
-      font-size: 1.5em;
-    }
-  
-    h2{
-      font-size: 2.5em;
-    }
-  
-    .menus {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+  h1 {
+    font-size: 1.5em;
+  }
 
-    .menus > a > div {
-      transform: scale(0.75);
-    }
+  h2 {
+    font-size: 2.5em;
+  }
 
-    .menus > a > div:hover{
-      transform: scale(1);
-    }
-  
-    .menu-note, .menu-chic, .menu-delices, .menu-gout {
-      margin-top: 5%;
-      font-size: 1em;
-      width: 300px;
-      height: 450px;
-    }
-  
-  
+  .menus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menus > a > div {
+    transform: scale(0.75);
+  }
+
+  .menus > a > div:hover {
+    transform: scale(1);
+  }
+
+  .menu-note, .menu-chic, .menu-delices, .menu-gout {
+    margin-top: 5%;
+    font-size: 1em;
+    width: 300px;
+    height: 450px;
+  }
+
   #carte-2 > div > h3 {
     font-size: 1.5em;
     font-family: "roboto";
@@ -37,147 +36,146 @@
     padding-bottom: 2%;
     text-align: center;
   }
-  
-  
-    .btn-prochainement {
-      font-size: 1.5em;
-      margin-left: 30%;
-      margin-right: 30%;
-      margin-bottom: 10%;
-    }
-  
-    footer {
-      font-size: 2.5em;
-      margin: 0;
-      padding: 5px;
-    }
-  
-    #carte, #carte-2, #carte-3, #carte-4 {
-      margin: 5% 2%;
-    }
-  
-    article {
-      display: grid;
-      grid-template-columns: 70% 10%;
-      justify-content: center;
-    }
-  
-    .plats {
-      font-size: 1em;
-    }
-  
-    .prix {
-      font-size: 1em;
-    }
+
+  .btn-prochainement {
+    font-size: 1.5em;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 10%;
   }
-  @media all and (max-width: 699px) {
-    h1 {
-      font-size: 1.5em;
-    }
-    
-    h2{
-      font-size: 1.75em;
-    }
-  
-    
-    #carte-2 > div > h3 {
-      font-size: 1em;
-      font-family: "roboto";
-      padding: 2% 2%;
-      text-align: center;
-    }
-  
-  #carte > h2, #carte-2 > h2, #carte-3 > h2, #carte-4 > h2{
-    font-size: 1.75em ;
+
+  footer {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 5px;
   }
-  
-  #titre-bas{
+
+  #carte, #carte-2, #carte-3, #carte-4 {
+    margin: 5% 2%;
+  }
+
+  article {
+    display: grid;
+    grid-template-columns: 70% 10%;
+    justify-content: center;
+  }
+
+  .plats {
+    font-size: 1em;
+  }
+
+  .prix {
+    font-size: 1em;
+  }
+}
+@media all and (max-width: 699px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
     font-size: 1.75em;
   }
-  
-    #carte > div > h3, #carte-3 > div > h3, #carte-4 > div > h3{
-      font-size: 1.25em;
-    }
-    
-    .menus {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
 
-   
-  
-    .menu-note, .menu-chic, .menu-delices, .menu-gout {
-      margin-top: 5%;
-      margin-bottom: 5%;
-      width: 50%;
-      font-size: 0.5em;
-      height: 300px;
-    }
-  
-    .btn-prochainement {
-      font-size: 1em;
-      margin-left: 20%;
-      margin-right: 20%;
-      margin-bottom: 15%;
-    }
-  
-    footer {
-      font-size: 1.25em;
-      margin: 0;
-      padding: 5px;
-    }
-  
-    #carte, #carte-2, #carte-3, #carte-4 {
-      margin: 5% 0%;
-    }
-  
-    article {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  
-    .plats {
-      font-size: 0.75em;
-      width: 100%;
-      margin-top: 0;
-      margin-bottom: 5%;
-      text-align: center;
-    }
-  
-    .prix {
-      font-size: 0.75em;
-      text-align: center;
-      margin-top: 0;
-      margin-bottom: 5%;
-    }
+  #carte-2 > div > h3 {
+    font-size: 0.85em;
+    font-family: "roboto";
+    padding: 2% 2%;
+    text-align: center;
   }
-  @media all and (max-width: 320px) {
-    .menu-note, .menu-chic, .menu-delices, .menu-gout {
-      margin-top: 5%;
-      margin-bottom: 5%;
-      width: 70%;
-      font-size: 0.5em;
-      height: 320px;
-    }
-  
-  
-    #carte-2 > div > h3 {
-      font-size: 1em;
-      font-family: "roboto";
-      padding-top: 2%;
-      padding-bottom: 2%;
-      text-align: center;
-    }
-    
-  
-    footer {
-      font-size: 1.25em;
-    }
 
-    .btn-prochainement{
-      margin-bottom: 15%;
-    }
+  #carte > h2, #carte-2 > h2, #carte-3 > h2, #carte-4 > h2 {
+    font-size: 1.75em;
   }
+
+  #titre-bas {
+    font-size: 1.75em;
+  }
+
+  #carte > div > h3, #carte-3 > div > h3, #carte-4 > div > h3 {
+    font-size: 1.10em;
+  }
+
+  .menus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-note, .menu-chic, .menu-delices, .menu-gout {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 50%;
+    font-size: 0.5em;
+    height: 300px;
+  }
+
+  .btn-prochainement {
+    font-size: 1em;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 15%;
+  }
+
+  footer {
+    font-size: 1.25em;
+    margin: 0;
+    padding: 5px;
+  }
+
+  #carte, #carte-2, #carte-3, #carte-4 {
+    margin: 5% 0%;
+  }
+
+  section > #french-appetit, section > #french-plaisir, section > #french-gourmand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .carte-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .plats {
+    font-size: 0.8em;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 5%;
+    text-align: center;
+  }
+
+  .prix {
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 5%;
+  }
+}
+@media all and (max-width: 320px) {
+  .menu-note, .menu-chic, .menu-delices, .menu-gout {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 70%;
+    font-size: 0.5em;
+    height: 320px;
+  }
+
+  #carte-2 > div > h3 {
+    font-size: 1.2em;
+    font-family: "roboto";
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+  }
+
+  footer {
+    font-size: 1.25em;
+  }
+
+  .btn-prochainement {
+    margin-bottom: 15%;
+  }
+}

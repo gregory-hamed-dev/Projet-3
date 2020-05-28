@@ -154,12 +154,12 @@ h2 {
 
 .menus > a > div {
   transform: scale(1);
-  opacity: 0.7;
+  opacity: 1;
   transition: transform, opacity, 1s cubic-bezier(0.22, 0.66, 0.22, 0.75);
 }
 .menus > a > div:hover {
   transform: scale(1.3);
-  opacity: 1;
+  opacity: 0.7;
 }
 
 a {
@@ -197,7 +197,6 @@ a {
   background: linear-gradient(to right, #c77412, #834afe);
   color: transparent;
   -webkit-background-clip: text;
-  background-clip: text;
   font-size: 1.5em;
   font-family: "croissant one";
 }
@@ -206,7 +205,6 @@ a {
   background: linear-gradient(to right, #0e35e0, #8bc4fa);
   color: transparent;
   -webkit-background-clip: text;
-  background-clip: text;
   font-size: 2em;
   font-family: "dancing script";
 }
@@ -215,7 +213,6 @@ a {
   background: linear-gradient(to right, #358e31, #b8ff6e);
   color: transparent;
   -webkit-background-clip: text;
-  background-clip: text;
   font-size: 2em;
   font-family: "ink free";
 }
@@ -252,8 +249,8 @@ a {
 }
 
 /*Note de musique du menu 1 sur la page d'accueil */
-#note-music {
-  width: 35%;
+#note-music-main {
+  width: 50%;
 }
 
 .btn-prochainement {
@@ -332,7 +329,6 @@ a {
   background: linear-gradient(to right, #c77412, #834afe);
   color: transparent;
   -webkit-background-clip: text;
-  background-clip: text;
   font-size: 2.5em;
   font-family: "croissant one";
   text-align: center;
@@ -343,7 +339,6 @@ a {
   background: linear-gradient(to right, #0e35e0, #8bc4fa);
   color: transparent;
   -webkit-background-clip: text;
-  background-clip: text;
   font-size: 4em;
   font-family: "dancing script";
   text-align: center;
@@ -354,7 +349,6 @@ a {
   background: linear-gradient(to right, #358e31, #b8ff6e);
   color: transparent;
   -webkit-background-clip: text;
-  background-clip: text;
   font-size: 4em;
   font-family: "ink free";
   text-align: center;
@@ -391,11 +385,10 @@ a {
 }
 
 #carte-2 > div > h3 {
-  font-size: 1.5em;
   font-family: "roboto";
   width: 50%;
   text-align: center;
-  cursor: pointer;
+  font-size: 1.5em;
 }
 
 .menu-titre-deco {
@@ -405,32 +398,45 @@ a {
 }
 
 /* layouts menus*/
-article {
+section > .carte-menu {
   display: grid;
-  grid-template-columns: 65% 10%;
+  grid-template-columns: 75% 10%;
   justify-content: center;
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-family: "jeff script";
 }
 
 #french-appetit {
   font-family: "roboto";
   color: #c67412;
+  display: grid;
+  grid-template-columns: 75% 10%;
+  justify-content: center;
+  font-size: 1.35em;
 }
 
 #french-plaisir {
   font-family: "roboto";
   color: #a56799;
+  display: grid;
+  grid-template-columns: 75% 10%;
+  justify-content: center;
+  font-size: 1.25em;
 }
 
 #french-gourmand {
   font-family: "roboto";
   color: #6e4ccc;
+  display: grid;
+  grid-template-columns: 75% 10%;
+  justify-content: center;
+  font-size: 1.25em;
 }
 
 .plats {
   margin: 0;
   line-height: 2em;
+  font-size: 1em;
 }
 
 .prix {
@@ -459,7 +465,9 @@ article {
 /*gestion des svg*/
 /*Svg de la page la note enchantée*/
 #note-music {
-  width: 35%;
+  width: 12%;
+  align-self: center;
+  padding-top: 25px;
 }
 
 .note-music-menu {
@@ -468,8 +476,8 @@ article {
   align-self: center;
 }
 
-.note-music-menu-bas {
-  width: 10%;
+#note-music-menu-bas {
+  width: 13%;
   margin-right: 2%;
 }
 
@@ -665,7 +673,7 @@ img {
   }
 
   #carte-2 > div > h3 {
-    font-size: 1em;
+    font-size: 0.85em;
     font-family: "roboto";
     padding: 2% 2%;
     text-align: center;
@@ -680,7 +688,7 @@ img {
   }
 
   #carte > div > h3, #carte-3 > div > h3, #carte-4 > div > h3 {
-    font-size: 1.25em;
+    font-size: 1.1em;
   }
 
   .menus {
@@ -715,14 +723,20 @@ img {
     margin: 5% 0%;
   }
 
-  article {
+  section > #french-appetit, section > #french-plaisir, section > #french-gourmand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .carte-menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
   .plats {
-    font-size: 0.75em;
+    font-size: 0.8em;
     width: 100%;
     margin-top: 0;
     margin-bottom: 5%;
@@ -730,7 +744,7 @@ img {
   }
 
   .prix {
-    font-size: 0.75em;
+    font-size: 0.8em;
     text-align: center;
     margin-top: 0;
     margin-bottom: 5%;
@@ -746,7 +760,7 @@ img {
   }
 
   #carte-2 > div > h3 {
-    font-size: 1em;
+    font-size: 1.2em;
     font-family: "roboto";
     padding-top: 2%;
     padding-bottom: 2%;
@@ -767,7 +781,7 @@ img {
 }
 @font-face {
   font-family: "Jeff Script";
-  src: url("../Fonts/Jeff\ Script\ Regular.otf") format("Opentype");
+  src: url("../Fonts/Jeff Script Regular.otf") format("Opentype");
 }
 @font-face {
   font-family: "Croissant One";

@@ -37,11 +37,12 @@
     text-align: center;
   }
 
-  .btn-prochainement {
-    font-size: 1.5em;
+  #btn-prochainement {
+    font-size: 1.75em;
     margin-left: 30%;
     margin-right: 30%;
     margin-bottom: 10%;
+    height: 50px;
   }
 
   footer {
@@ -111,11 +112,12 @@
     height: 300px;
   }
 
-  .btn-prochainement {
+  #btn-prochainement {
     font-size: 1em;
     margin-left: 20%;
     margin-right: 20%;
     margin-bottom: 15%;
+    height: 30px;
   }
 
   footer {
@@ -177,7 +179,7 @@
     font-size: 1.25em;
   }
 
-  .btn-prochainement {
+  #btn-prochainement {
     margin-bottom: 15%;
   }
 }

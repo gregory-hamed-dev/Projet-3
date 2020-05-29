@@ -2,7 +2,7 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: $main-fontfamily;
-  }
+}
   
 
 /*selection de texte avec les couleurs principales du site*/
@@ -19,8 +19,8 @@ header{
 
 h1{
     margin: 0px;
-    padding-top: 1%;
-    padding-bottom: 1%;  
+    padding-top: 3%;
+    padding-bottom: 3%;  
     animation: progress-scale 1000ms;
 }
 
@@ -69,7 +69,7 @@ h1{
       opacity: 1;
       transform:scale(1);
     }
-  }
+}
 
 h1 > a{
     color: $main-textcolor;
@@ -85,7 +85,7 @@ footer
     color: $main-textcolor;
     display: flex;
     justify-content: space-between;
-    font-size: 2em;
+    font-size: 2.5em;
     padding: 1% 2%;
     position: fixed;
     bottom: 0;
@@ -101,17 +101,28 @@ footer
 }
 
 @keyframes shake {
-        0% { transform: translate(1px, 1px) rotate(0deg); }
-        10% { transform: translate(-1px, -2px) rotate(-2deg); }
-        20% { transform: translate(-3px, 0px) rotate(2deg); }
-        30% { transform: translate(3px, 2px) rotate(0deg); }
-        40% { transform: translate(1px, -1px) rotate(2deg); }
-        50% { transform: translate(-1px, 2px) rotate(-2deg); }
-        60% { transform: translate(-3px, 1px) rotate(0deg); }
-        70% { transform: translate(3px, 1px) rotate(-2deg); }
-        80% { transform: translate(-1px, -1px) rotate(2deg); }
-        90% { transform: translate(1px, 2px) rotate(0deg); }
-        100% { transform: translate(1px, -2px) rotate(-2deg); }
+        0% { transform: translate(1px, 1px) rotate(0deg); 
+        }
+        10% { transform: translate(-1px, -2px) rotate(-2deg); 
+        }
+        20% { transform: translate(-3px, 0px) rotate(2deg); 
+        }
+        30% { transform: translate(3px, 2px) rotate(0deg); 
+        }
+        40% { transform: translate(1px, -1px) rotate(2deg); 
+        }
+        50% { transform: translate(-1px, 2px) rotate(-2deg); 
+        }
+        60% { transform: translate(-3px, 1px) rotate(0deg); 
+        }
+        70% { transform: translate(3px, 1px) rotate(-2deg); 
+        }
+        80% { transform: translate(-1px, -1px) rotate(2deg); 
+        }
+        90% { transform: translate(1px, 2px) rotate(0deg); 
+        }
+        100% { transform: translate(1px, -2px) rotate(-2deg); 
+        }
 }
 
 #contact > a, #mentions > a{
@@ -135,7 +146,6 @@ h2{
     justify-content: $align;
     align-items: $align;
     margin-top: 5%;
-   
 }
     
 .menus > a > div{
@@ -157,8 +167,22 @@ a{
 }
     
 .menu-note{
-    background-color: #fcdfdb ;
+    background-color: #FDE0DC ;
 }
+
+.menu-chic{
+  background-color:#FFF5FE;
+}
+    
+.menu-delices{
+    background-color: #f9f9f9;
+}
+
+.menu-gout{
+  background-color: #FDFFFD;
+}
+
+
 
 .menu-note > div{
     display: flex;
@@ -185,15 +209,15 @@ a{
 .menu-delices > div > h2{
     background: $gradient-menu3;
     @include h-gradient-effect;
-    font-size: 2em; 
+    font-size: 2.25em; 
     font-family: 'dancing script';
 }
     
 .menu-gout > div > h2{
     background: $gradient-menu4;
     @include h-gradient-effect;
-    font-size: 2em; 
-    font-family: 'ink free';
+    font-size: 2.25em; 
+    font-family: "Kaushanscript";
 }
 
 .menu-note > div > h3{
@@ -221,10 +245,6 @@ a{
     font-size: 3em;
     font-family: $secondary-font;
     text-align: $align;
-}
-    
-.menu-delices{
-    background-color: #f9f9f9;
 }
 
 /*Note de musique du menu 1 sur la page d'accueil */

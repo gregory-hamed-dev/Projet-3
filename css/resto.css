@@ -20,8 +20,8 @@ header {
 
 h1 {
   margin: 0px;
-  padding-top: 1%;
-  padding-bottom: 1%;
+  padding-top: 3%;
+  padding-bottom: 3%;
   animation: progress-scale 1000ms;
 }
 
@@ -84,7 +84,7 @@ footer {
   color: #fecc45;
   display: flex;
   justify-content: space-between;
-  font-size: 2em;
+  font-size: 2.5em;
   padding: 1% 2%;
   position: fixed;
   bottom: 0;
@@ -176,7 +176,19 @@ a {
 }
 
 .menu-note {
-  background-color: #fcdfdb;
+  background-color: #FDE0DC;
+}
+
+.menu-chic {
+  background-color: #FFF5FE;
+}
+
+.menu-delices {
+  background-color: #f9f9f9;
+}
+
+.menu-gout {
+  background-color: #FDFFFD;
 }
 
 .menu-note > div {
@@ -194,7 +206,7 @@ a {
 }
 
 .menu-chic > div > h2 {
-  background: linear-gradient(to right, #c77412, #834afe);
+  background: linear-gradient(to right, #D78334, #8F5AFF);
   color: transparent;
   -webkit-background-clip: text;
   font-size: 1.5em;
@@ -205,16 +217,16 @@ a {
   background: linear-gradient(to right, #0e35e0, #8bc4fa);
   color: transparent;
   -webkit-background-clip: text;
-  font-size: 2em;
+  font-size: 2.25em;
   font-family: "dancing script";
 }
 
 .menu-gout > div > h2 {
-  background: linear-gradient(to right, #358e31, #b8ff6e);
+  background: linear-gradient(to right, #489B40, #BEFF7F);
   color: transparent;
   -webkit-background-clip: text;
-  font-size: 2em;
-  font-family: "ink free";
+  font-size: 2.25em;
+  font-family: "Kaushanscript";
 }
 
 .menu-note > div > h3 {
@@ -244,24 +256,21 @@ a {
   text-align: center;
 }
 
-.menu-delices {
-  background-color: #f9f9f9;
-}
-
 /*Note de musique du menu 1 sur la page d'accueil */
 #note-music-main {
   width: 50%;
 }
 
-.btn-prochainement {
+#btn-prochainement {
   background-color: #579c87;
   color: #fecc45;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2% 30% 7%;
-  font-size: 2.5em;
+  margin: 5% 30% 10%;
+  font-size: 2.75em;
   border-radius: 20px;
+  height: 100px;
 }
 
 .load {
@@ -302,11 +311,11 @@ a {
 }
 
 #carte {
-  background-color: #fcdfdb;
+  background-color: #FDE0DC;
 }
 
 #carte-2 {
-  background-color: #fef5fa;
+  background-color: #FFF5FE;
 }
 
 #carte-3 {
@@ -314,7 +323,7 @@ a {
 }
 
 #carte-4 {
-  background-color: #fff;
+  background-color: #FDFFFD;
 }
 
 /* titres des pages menus*/
@@ -326,7 +335,7 @@ a {
 }
 
 #carte-2 > h2 {
-  background: linear-gradient(to right, #c77412, #834afe);
+  background: linear-gradient(to right, #D78334, #8F5AFF);
   color: transparent;
   -webkit-background-clip: text;
   font-size: 2.5em;
@@ -346,7 +355,7 @@ a {
 }
 
 #carte-4 > h2 {
-  background: linear-gradient(to right, #358e31, #b8ff6e);
+  background: linear-gradient(to right, #489B40, #BEFF7F);
   color: transparent;
   -webkit-background-clip: text;
   font-size: 4em;
@@ -586,7 +595,7 @@ img {
   width: 0;
   height: 4px;
   transition: width 1000ms ease-in-out;
-  background: linear-gradient(to right, #358e31, #b8ff6e);
+  background: linear-gradient(to right, #489B40, #BEFF7F);
 }
 #carte-4 > div > h3:hover::after {
   width: 100%;
@@ -632,11 +641,12 @@ img {
     text-align: center;
   }
 
-  .btn-prochainement {
-    font-size: 1.5em;
+  #btn-prochainement {
+    font-size: 1.75em;
     margin-left: 30%;
     margin-right: 30%;
     margin-bottom: 10%;
+    height: 50px;
   }
 
   footer {
@@ -706,11 +716,12 @@ img {
     height: 300px;
   }
 
-  .btn-prochainement {
+  #btn-prochainement {
     font-size: 1em;
     margin-left: 20%;
     margin-right: 20%;
     margin-bottom: 15%;
+    height: 30px;
   }
 
   footer {
@@ -771,7 +782,7 @@ img {
     font-size: 1.25em;
   }
 
-  .btn-prochainement {
+  #btn-prochainement {
     margin-bottom: 15%;
   }
 }
@@ -798,6 +809,10 @@ img {
 @font-face {
   font-family: "Ink free";
   src: url("../Fonts/Inkfree.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Kaushanscript";
+  src: url("../Fonts/kaushanscript-regular.ttf") format("truetype");
 }
 
 /*# sourceMappingURL=resto.css.map */

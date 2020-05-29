@@ -1,14 +1,15 @@
-.btn-prochainement{
+#btn-prochainement{
     background-color: $main_backgroundcolor;
     color: $main-textcolor;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2% 30% 7%;
-    font-size: 2.5em;
+    margin: 5% 30% 10%;
+    font-size: 2.75em;
     border-radius: 20px;
+    height: 100px;
+    
 }
-
 
 .load{
     margin-left: 3px;

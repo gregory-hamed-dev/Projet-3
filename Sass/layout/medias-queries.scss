@@ -55,12 +55,6 @@
     margin: 5% 2%;
   }
 
-  article {
-    display: grid;
-    grid-template-columns: 70% 10%;
-    justify-content: center;
-  }
-
   .plats {
     font-size: 1em;
   }
@@ -130,13 +124,13 @@
     margin: 5% 0%;
   }
 
-  section > #french-appetit, section > #french-plaisir, section > #french-gourmand {
+  #french-appetit, #french-plaisir, #french-gourmand {
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 1.25em;
   }
-  section > .carte-menu{
+  .carte-menu{
     display: flex;
     flex-direction: column;
     justify-content: center;

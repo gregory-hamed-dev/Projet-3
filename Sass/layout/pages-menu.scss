@@ -4,7 +4,7 @@
     @include layout-main-menu;   
 }
 #carte{
-    background-color: #FDE0DC;
+    background-color: #FCDFDB;
 }
 
 #carte-2{
@@ -51,7 +51,7 @@
     background: $gradient-menu4;
     @include h-gradient-effect;
     font-size: 4em; 
-    font-family: 'ink free';
+    font-family: "Kaushanscript";
     text-align: $align;
     padding-top: $pad-top;
 }
@@ -101,7 +101,7 @@
 
 /* layouts menus*/
 
-section > .carte-menu {
+.carte-menu {
     display: grid;
     grid-template-columns: 75% 10%;
     justify-content: center;
